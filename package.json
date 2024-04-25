@@ -1,0 +1,21 @@
+{
+  "name": "cypress-praticando-basico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.7.3",
+    "mocha": "^10.4.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/cypress": "^1.1.3",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
