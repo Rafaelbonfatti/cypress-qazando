@@ -1,5 +1,5 @@
 # Nome da pipeline
-name: run Basic Testes 
+name: run Basic Testes
 
 # Momento da execução
 on:
@@ -30,3 +30,10 @@ jobs:
           record: true 
         env:
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+      
+      # Upload do relatório do mocha  
+      - name: Upload relatório 
+        uses: actions/upload-artifact@v4
+        with: 
+          name: Relatório
+          path: cypress/reports/html
