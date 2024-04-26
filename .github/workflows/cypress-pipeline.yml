@@ -1,28 +1,28 @@
-# nome da papiline
+# nome da pipeline
 name: run Basic Testes 
 
-#  em que momento será executada
+# momento da execução
 on:
-  pull_request: 
-    braches: [master]
+  pull_request:
+    branches: [master]
 
-    jobs:
-    # o que sera feito nessa papeline
-    # só teremos um job: rodar os testes
-      cypress-run:
-      # maquina que será executado
-      runs-on: ubuntu-latest
-     # passo a oasso para rodar  os testes 
-      steps:
+# jobs a serem executados na pipeline
+jobs:
+  # job para rodar os testes
+  cypress-run:
+    # máquina onde será executado
+    runs-on: ubuntu-latest
+
+    # passos para executar os testes
+    steps:
       # clone do projeto 
       - name: Checkout/Clone do projeto
-        uses:  actions/checkout@v4
+        uses: actions/checkout@v4
 
-        # execução e configuração do nosso projeto
-        - name: Run testes
-          uses: cypress-io/github-action@v5
-          with:
-            record: true 
-          env:
+      # execução e configuração do nosso projeto
+      - name: Run testes
+        uses: cypress-io/github-action@v5
+        with:
+          record: true 
+        env:
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
-        
