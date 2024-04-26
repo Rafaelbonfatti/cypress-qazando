@@ -11,7 +11,7 @@ on:
     # só teremos um job: rodar os testes
       cypress-run:
       # maquina que será executado
-      runs-on: ubuntu-least
+      runs-on: ubuntu-latest
      # passo a oasso para rodar  os testes 
       steps:
       # clone do projeto 
