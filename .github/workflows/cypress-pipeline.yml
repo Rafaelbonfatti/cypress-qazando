@@ -17,7 +17,10 @@ jobs:
     steps:
       # clone do projeto 
       - name: Checkout/Clone do projeto
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4git
+
+        name: Instalar dependencias do projeto
+        run: npm install 
 
       # execução e configuração do nosso projeto
       - name: Run testes
