@@ -1,4 +1,3 @@
-/// <reference types='cypress'/>
 
 export default {
     
@@ -26,7 +25,7 @@ export default {
     },
 
     fillPassword(password) {
-        cy.get('#password')
+        cy.get('#passwordx')
         .type(password)
     },
 
